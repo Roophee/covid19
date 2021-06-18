@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import borderStyle from "../Common/borderStyle";
+import borderStyle from "../styles/borderStyle";
 
 export const StyledContainer = styled.div`
   width: 30%;
@@ -20,7 +20,6 @@ export const StyledSearch = styled.input.attrs({
   padding: 5px;
   font-size: 32px;
   border: none;
-  //color: #bdbdbd;
   cursor: text;
 
   &:hover,

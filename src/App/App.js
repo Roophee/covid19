@@ -1,14 +1,16 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../Common/GlobalStyle";
-import "../App.css";
 import Header from "../Header";
+import { primary } from "../styles/themes"
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
+      <ThemeProvider theme={primary}>
+        <GlobalStyle/>
         <Header />
-        <p>covid19</p>
+      </ThemeProvider>
     </>
   );
 }

@@ -13,7 +13,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background: #fff;
+  background: ${({theme}) => theme.bgc};
+  color: ${({theme}) => theme.fontColor}
   width: 100%;
   height: 100%;
   overflow: overlay;
