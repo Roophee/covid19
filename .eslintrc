@@ -11,6 +11,7 @@
   ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "quotes": [2, "single", { "avoidEscape": true }],
     "prettier/prettier": "warn",
     "no-return-assign": "warn",
     "no-unused-vars": "warn",

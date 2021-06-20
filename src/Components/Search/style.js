@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import borderStyle from "../styles/borderStyle";
+import styled from 'styled-components';
+import borderStyle from '../../styles/borderStyle';
 
 export const StyledContainer = styled.div`
   width: 30%;
@@ -11,10 +11,10 @@ export const StyledWrapper = styled.div`
   padding-right: 7px`;
 
 export const StyledSearch = styled.input.attrs({
-  type: "text",
-  id: "search",
-  placeholder: "Search...",
-  autocomplete: "off",
+  type: 'text',
+  id: 'search',
+  placeholder: 'Search...',
+  autocomplete: 'off',
 })`
   width: calc(100% - 30px);
   padding: 5px;

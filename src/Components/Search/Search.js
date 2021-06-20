@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   StyledSearch,
   StyledDiv,
   StyledContainer,
   StyledWrapper,
-} from "./style";
+} from './style';
 
 const Search = () => (
   <StyledContainer>

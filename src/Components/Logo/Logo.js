@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import CovidLogo from "../img/covid-logo.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import CovidLogo from '../img/covid-logo.jpg';
 
 const StyledLogo = styled.img`
   width: 100px;
