@@ -23,7 +23,7 @@ function App() {
         <GlobalStyle />
         <Header />
         {!countriesInfo && <Preloader/>}
-        {countriesInfo && <Main countriesInfo={countriesInfo}/>}
+        {countriesInfo && <Main countriesInfo={countriesInfo} />}
       </ThemeProvider>
     </>
   );
