@@ -21,9 +21,7 @@ export const StyledWrapper = styled.div`
   ${borderStyle};
   padding-right: 7px`;
 
-export const StyledSearch = styled.input.attrs({
-  type:  props => props.text ,
-})`
+export const StyledSearch = styled.input`
   width: calc(100% - 30px);
   padding: 5px;
   font-size: 32px;

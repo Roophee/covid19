@@ -6,6 +6,7 @@ import { getCountryListFromAPI } from '../../data/APIHndlers';
 import { filterDataOnSearch } from '../../data/dataHandlers';
 import { primary } from '../../styles/themes';
 import Preloader from '../Preloader';
+import TimeoutMessage from '../TimeoutMessage';
 import Header from '../Header';
 import Main from '../Main';
 import ModalLocal from '../Popup';
@@ -15,14 +16,20 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [getPopupIsOpen, setPopupIsOpen] = useState(false);
   const [countryDetailInfo, setCountryDetailInfo] = useState({});
+  const [getResponseTimeout, setResponseTimeout] = useState(false);
 
   useEffect(() => {
+    setResponseTimeout(false);
+    const timeout = setTimeout(() => {
+      setResponseTimeout(true);
+    }, 4000);
     getCountryListFromAPI().then((data) => {
-      if (data)
+      if (data) {
+        clearTimeout(timeout);
         setCountriesNames(data.Countries);
+      }
     });
   }, []);
-
 
   return (
     <StyledApp id="App">
@@ -34,7 +41,8 @@ function App() {
           countryDetailInfo={countryDetailInfo}
         />
         <Header searchValue={searchValue} setSearchValue={setSearchValue} />
-        {!countriesInfo &&  <Preloader />}
+        {!countriesInfo && !getResponseTimeout && <Preloader />}
+        {!countriesInfo && getResponseTimeout && <TimeoutMessage />}
         {countriesInfo && (
           <Main
             setPopupIsOpen={setPopupIsOpen}
