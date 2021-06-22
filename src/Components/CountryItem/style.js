@@ -37,7 +37,7 @@ export const StyledCountryValue = styled.div`
   }
   
   @media (max-width: 550px) {
-    width: 30%;
+    width: 35%;
   }
 
   @media (max-width: 400px) {
