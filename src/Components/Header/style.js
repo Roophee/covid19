@@ -5,6 +5,11 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   margin: 30px 0;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 `;
 
 export default StyledHeader;

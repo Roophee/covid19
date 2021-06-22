@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   StyledCountryItem,
   StyledCountryName,
@@ -7,12 +7,22 @@ import {
 } from './style';
 
 const CountryItem = (props) => {
-  console.log(props);
+  const { setPopupIsOpen, setCountryDetailInfo, country, index, tableHeader } =
+    props;
+
+  const onClickHandler = useCallback((e) => {
+    setPopupIsOpen((prev) => !prev);
+    setCountryDetailInfo(country);
+  }, []);
+
   return (
-    <StyledCountryItem {...props}>
-      <StyledCountryNumber>{props.index} </StyledCountryNumber>
-      <StyledCountryName>{props.country.Country}</StyledCountryName>
-      <StyledCountryValue>{props.country.TotalConfirmed}</StyledCountryValue>
+    <StyledCountryItem
+      tableHeader={tableHeader}
+      onClick={!tableHeader ? onClickHandler : null}
+    >
+      <StyledCountryNumber>{index} </StyledCountryNumber>
+      <StyledCountryName>{country.Country}</StyledCountryName>
+      <StyledCountryValue tableHeader={tableHeader} >{country.TotalConfirmed}</StyledCountryValue>
     </StyledCountryItem>
   );
 };

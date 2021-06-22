@@ -10,21 +10,27 @@ const headerValues = {
 };
 
 const Main = (props) => {
-  const { countriesInfo} = props;
+  const { countriesInfo, setPopupIsOpen, setCountryDetailInfo } = props;
   const [sortType, setSortType] = useState(null);
 
   if (sortType) {
-    countriesInfo.sort(getSortFunction(sortType))
+    countriesInfo.sort(getSortFunction(sortType));
   }
 
   return (
     <StyledMain>
       <CountryItem tableHeader country={headerValues} index="№" />
-      <SortPanel setSortType={setSortType} sortType={sortType}/>
+      <SortPanel setSortType={setSortType} sortType={sortType} />
       {countriesInfo.map((country, index) => (
-        <CountryItem country={country} index={index + 1} key={country.Slug} />
+        <CountryItem
+          country={country}
+          setCountryDetailInfo={setCountryDetailInfo}
+          setPopupIsOpen={setPopupIsOpen}
+          index={index + 1}
+          key={country.Slug}
+        />
       ))}
-       </StyledMain>
+    </StyledMain>
   );
 };
 

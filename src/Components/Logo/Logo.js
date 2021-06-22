@@ -1,13 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import CovidLogo from '../img/covid-logo.jpg';
+import StyledLogo from './style';
+import covidLogo from '../../img/covid-logo.jpg';
 
-const StyledLogo = styled.img`
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-`;
 
-const Logo = () => <StyledLogo src={CovidLogo} alt="covid19-logo" />;
+const Logo = () => (
+  <a href="https://github.com/Roophee/covid19" target="_blank" rel="noreferrer">
+    <StyledLogo src={covidLogo} alt="covid19-logo" />
+  </a>
+);
 
 export default Logo;

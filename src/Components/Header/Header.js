@@ -3,10 +3,10 @@ import StyledHeader from './style';
 import LogoPanel from '../LogoPanel';
 import Search from '../Search';
 
-const Header = () => (
+const Header = ({ searchValue, setSearchValue }) => (
   <StyledHeader>
     <LogoPanel />
-    <Search />
+    <Search searchValue={searchValue} setSearchValue={setSearchValue} />
   </StyledHeader>
 );
 

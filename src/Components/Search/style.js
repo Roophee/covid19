@@ -3,7 +3,18 @@ import borderStyle from '../../styles/borderStyle';
 
 export const StyledContainer = styled.div`
   width: 30%;
+  min-width: 280px;
   padding: 18px 0;
+  
+  @media (max-width: 750px) {
+    align-self: flex-end;
+    padding: 5px 0;
+  }
+  
+  @media (max-width: 550px) {
+    align-self: center;
+    width: 90%;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -11,10 +22,7 @@ export const StyledWrapper = styled.div`
   padding-right: 7px`;
 
 export const StyledSearch = styled.input.attrs({
-  type: 'text',
-  id: 'search',
-  placeholder: 'Search...',
-  autocomplete: 'off',
+  type:  props => props.text ,
 })`
   width: calc(100% - 30px);
   padding: 5px;
@@ -30,7 +38,7 @@ export const StyledSearch = styled.input.attrs({
   }
 `;
 
-export const StyledDiv = styled.div`
+export const IconWrapper = styled.div`
   width: 30px;
   font-size: 32px;
   display: inline-block;

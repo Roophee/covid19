@@ -1,11 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import StyledLogoPanel from './style';
 import Logo from '../Logo';
 import Title from '../Title';
-
-const StyledLogoPanel = styled.div`
-  display: flex;
-`;
 
 const LogoPanel = () => (
   <StyledLogoPanel>

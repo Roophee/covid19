@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   StyledSearch,
-  StyledDiv,
+  IconWrapper,
   StyledContainer,
   StyledWrapper,
 } from './style';
 
-const Search = () => (
-  <StyledContainer>
-    <StyledWrapper>
-      <StyledSearch />
-      <StyledDiv>
-        <i className="fas fa-search" />
-      </StyledDiv>
-    </StyledWrapper>
-  </StyledContainer>
-);
+const Search = ({ searchValue, setSearchValue }) => {
+  const onChangeHandler = useCallback(
+    (e) => {
+      setSearchValue(e.target.value.trim());
+    },
+    [searchValue]
+  );
+  return (
+    <StyledContainer>
+      <StyledWrapper>
+        <StyledSearch
+          value={searchValue}
+          onChange={onChangeHandler}
+          type="text"
+          id="search"
+          placeholder="Search..."
+          autocomplete="off"
+        />
+        <IconWrapper>
+          <i className="fas fa-search" />
+        </IconWrapper>
+      </StyledWrapper>
+    </StyledContainer>
+  );
+};
 
 export default Search;

@@ -8,6 +8,11 @@ const StyledTitle = styled.div`
   line-height: 1.4;
   text-transform: uppercase;
   justify-self: start;
+  
+  @media (max-width: 400px){
+    font-size: 2.7rem;
+    font-weight: 500;
+  }
 `;
 
 const Title = () => <StyledTitle><span>Statistic</span></StyledTitle>;

@@ -1,33 +1,31 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle`
-:root {
-  font-family: Roboto, sans-serif;
-  font-size: 18px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: ${({theme}) => theme.bgc};
-  color: ${({theme}) => theme.fontColor}
-  width: 100%;
-  height: 100%;
-  overflow: overlay;
-}
-
-#root {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
+  ${normalize}
+  
+  :root {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    
+    @media( min-width: 1500px) {
+      font-size: 28px;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: ${({theme}) => theme.bgc};
+    color: ${({theme}) => theme.fontColor}
+    width: 100%;
+    height: 100%;
+    overflow: overlay;
+  }
 `;
 
 export default GlobalStyle;
