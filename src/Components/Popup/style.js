@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import Popup from 'reactjs-popup';
 
- export const StyledModal = styled(Popup)`
+export const StyledModal = styled(Popup)`
   &-overlay {
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -10,18 +10,26 @@ import Popup from 'reactjs-popup';
 export const StyledCountryDetailedInfo = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  justify-content: space-around;
+  width: 31vw;
+  height: 37vh;
   min-width: 300px;
-  padding: 5px;
+  padding: 20px;
   color: #757575;
   background: #fff;
   border-radius: 10px;
+  
+  @media (max-width: 1150px) {
+    padding: 5px;
+  }
 
   & .title {
     margin: 0 auto 20px;
     color: #000;
-    font-weight: 700;
-    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
   }
   & .infoRow {
     display: flex;
@@ -29,6 +37,11 @@ export const StyledCountryDetailedInfo = styled.div`
     align-items: center;
     padding: 0 10px;
     margin-bottom: 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #666666;
   }
   & .infoCell {
     display: flex;
@@ -48,7 +61,7 @@ export const ModalButton = styled.button`
   background: ${(props) => props.theme.tableHeaderBgc};
   color: ${(props) => props.theme.tableHeaderColor};
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 20px;
   border-color: transparent;
   outline: none;
   cursor: pointer;

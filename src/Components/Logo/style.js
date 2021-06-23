@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledLogo = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin: 5px;
   @media (max-width: 750px) {
     width: 63px;

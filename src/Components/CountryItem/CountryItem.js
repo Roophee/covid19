@@ -21,8 +21,10 @@ const CountryItem = (props) => {
       onClick={!tableHeader ? onClickHandler : null}
     >
       <StyledCountryNumber>{index} </StyledCountryNumber>
-      <StyledCountryName>{country.Country}</StyledCountryName>
-      <StyledCountryValue tableHeader={tableHeader} >{country.TotalConfirmed}</StyledCountryValue>
+      <StyledCountryName tableHeader={tableHeader}>{country.Country}</StyledCountryName>
+      <StyledCountryValue tableHeader={tableHeader}>
+        {country.TotalConfirmed}
+      </StyledCountryValue>
     </StyledCountryItem>
   );
 };

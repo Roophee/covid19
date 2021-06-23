@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     font-family: Roboto, sans-serif;
     font-size: 18px;
+    color: #000;
     
     @media( min-width: 1500px) {
       font-size: 28px;
@@ -20,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background: ${({theme}) => theme.bgc};
-    color: ${({theme}) => theme.fontColor}
+    background: ${({ theme }) => theme.bgc};
+    color: ${({ theme }) => theme.fontColor}
     width: 100%;
     height: 100%;
     overflow: overlay;

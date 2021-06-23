@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledLogo from './style';
-import covidLogo from '../../img/covid-logo.jpg';
+import covidLogo from '../../img/covid.png';
 
 
 const Logo = () => (
