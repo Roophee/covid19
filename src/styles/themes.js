@@ -3,5 +3,5 @@ export const primary = {
   fontColor: '#000',
   borderColor: '#eaeaea',
   tableHeaderBgc: '#2196f3',
-  tableHeaderColor:  '#fff',
+  tableHeaderColor: '#fff',
 };

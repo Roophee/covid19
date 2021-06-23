@@ -9,7 +9,7 @@ const headerValues = {
   TotalConfirmed: 'Total Confirmed',
 };
 
-const Main = (props) => {
+const Main = props => {
   const { countriesInfo, setPopupIsOpen, setCountryDetailInfo } = props;
   const [sortType, setSortType] = useState(undefined);
 

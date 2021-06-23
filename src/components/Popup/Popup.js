@@ -1,15 +1,18 @@
 import React, { useRef, useCallback } from 'react';
 import { StyledModal, StyledCountryDetailedInfo, ModalButton } from './style';
 
-const LocalModal = (props) => {
+const LocalModal = props => {
   const { open, countryDetailInfo, setPopupIsOpen } = props;
   const ref = useRef();
   const closeTooltip = () => ref.current.close();
-  const onClickButtonHandler = useCallback((e) => {
-    e.preventDefault();
-    setPopupIsOpen((prev) => !prev);
-    closeTooltip();
-  }, []);
+  const onClickButtonHandler = useCallback(
+    e => {
+      e.preventDefault();
+      setPopupIsOpen(prev => !prev);
+      closeTooltip();
+    },
+    [setPopupIsOpen]
+  );
 
   return (
     <StyledModal ref={ref} open={open} closeOnDocumentClick={false}>
@@ -30,11 +33,7 @@ const LocalModal = (props) => {
         </div>
         <div className="infoRow">
           <div className="infoCell">
-            <span
-              className="iconify"
-              data-icon="bx:bxs-skull"
-              data-inline="false"
-            />
+            <span className="iconify" data-icon="bx:bxs-skull" data-inline="false" />
             <span>Total Deaths</span>
           </div>
           <div className="infoCell">
@@ -43,11 +42,7 @@ const LocalModal = (props) => {
         </div>
         <div className="infoRow">
           <div className="infoCell">
-            <span
-              className="iconify"
-              data-icon="ant-design:file-add-filled"
-              data-inline="false"
-            />
+            <span className="iconify" data-icon="ant-design:file-add-filled" data-inline="false" />
             <span>Total Recovered</span>
           </div>
           <div className="infoCell">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const sortAlphabetIncrease = (a, b) => {
   if (a.Country < b.Country) {
     return -1;
@@ -40,7 +38,7 @@ const sortTotalConfirmedDecrease = (a, b) => {
   return 0;
 };
 
-export const getSortFunction = (value) => {
+export const getSortFunction = value => {
   switch (value) {
     case 'alphaInc':
       return sortAlphabetIncrease;
@@ -56,7 +54,4 @@ export const getSortFunction = (value) => {
 };
 
 export const filterDataOnSearch = (data, searchValue) =>
-  data.filter((item) =>
-    item.Country.toLowerCase().startsWith(searchValue.toLowerCase())
-  );
-
+  data.filter(item => item.Country.toLowerCase().startsWith(searchValue.toLowerCase()));

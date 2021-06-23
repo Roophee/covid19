@@ -42,8 +42,8 @@ export const IconWrapper = styled.div`
   width: 30px;
   height: 30px;
   display: inline-block;
-  background: url("https://api.iconify.design/ic:baseline-search.svg?color=%239E9E9E")
-    no-repeat center center / contain;
-  content: url("https://api.iconify.design/ic:baseline-search.svg?color=%239E9E9E&height=24");
+  background: url('https://api.iconify.design/ic:baseline-search.svg?color=%239E9E9E') no-repeat
+    center center / contain;
+  content: url('https://api.iconify.design/ic:baseline-search.svg?color=%239E9E9E&height=24');
   vertical-align: -0.125em;
 `;

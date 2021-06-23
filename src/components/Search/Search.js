@@ -1,17 +1,12 @@
 import React, { useCallback } from 'react';
-import {
-  StyledSearch,
-  IconWrapper,
-  StyledContainer,
-  StyledWrapper,
-} from './style';
+import { StyledSearch, IconWrapper, StyledContainer, StyledWrapper } from './style';
 
 const Search = ({ searchValue, setSearchValue }) => {
   const onChangeHandler = useCallback(
-    (e) => {
+    e => {
       setSearchValue(e.target.value.trim());
     },
-    [searchValue]
+    [setSearchValue]
   );
   return (
     <StyledContainer>

@@ -1,1 +1,1 @@
-export { default } from './LogoPanel'
+export { default } from './LogoPanel';

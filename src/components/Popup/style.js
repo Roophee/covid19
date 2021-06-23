@@ -18,7 +18,7 @@ export const StyledCountryDetailedInfo = styled.div`
   color: #757575;
   background: #fff;
   border-radius: 10px;
-  
+
   @media (max-width: 1150px) {
     padding: 5px;
   }
@@ -58,8 +58,8 @@ export const ModalButton = styled.button`
   min-width: 50px;
   margin: 5px auto;
   padding: 7px;
-  background: ${(props) => props.theme.tableHeaderBgc};
-  color: ${(props) => props.theme.tableHeaderColor};
+  background: ${props => props.theme.tableHeaderBgc};
+  color: ${props => props.theme.tableHeaderColor};
   font-weight: 600;
   border-radius: 20px;
   border-color: transparent;

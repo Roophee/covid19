@@ -6,25 +6,19 @@ import {
   StyledCountryNumber,
 } from './style';
 
-const CountryItem = (props) => {
-  const { setPopupIsOpen, setCountryDetailInfo, country, index, tableHeader } =
-    props;
+const CountryItem = props => {
+  const { setPopupIsOpen, setCountryDetailInfo, country, index, tableHeader } = props;
 
-  const onClickHandler = useCallback((e) => {
-    setPopupIsOpen((prev) => !prev);
+  const onClickHandler = useCallback(() => {
+    setPopupIsOpen(prev => !prev);
     setCountryDetailInfo(country);
-  }, []);
+  }, [setPopupIsOpen, setCountryDetailInfo, country]);
 
   return (
-    <StyledCountryItem
-      tableHeader={tableHeader}
-      onClick={!tableHeader ? onClickHandler : null}
-    >
+    <StyledCountryItem tableHeader={tableHeader} onClick={!tableHeader ? onClickHandler : null}>
       <StyledCountryNumber>{index} </StyledCountryNumber>
       <StyledCountryName tableHeader={tableHeader}>{country.Country}</StyledCountryName>
-      <StyledCountryValue tableHeader={tableHeader}>
-        {country.TotalConfirmed}
-      </StyledCountryValue>
+      <StyledCountryValue tableHeader={tableHeader}>{country.TotalConfirmed}</StyledCountryValue>
     </StyledCountryItem>
   );
 };

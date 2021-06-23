@@ -3,6 +3,7 @@
     "react-app",
     "airbnb",
     "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
     "prettier"
   ],
   "plugins": [
@@ -12,6 +13,7 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": [2, "single", { "avoidEscape": true }],
+    "react/prop-types": 0,
     "prettier/prettier": "warn",
     "no-return-assign": "warn",
     "no-unused-vars": "warn",
@@ -19,7 +21,6 @@
     "jsx-a11y/label-has-associated-control": "warn",
     "jsx-a11y/no-onchange": "warn",
     "jsx-a11y/anchor-is-valid": "warn",
-    "react/prop-types": "warn",
     "no-nested-ternary": "warn",
     "no-underscore-dangle": "warn",
     "react/no-unescaped-entities": "warn",

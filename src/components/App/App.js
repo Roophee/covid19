@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import StyledApp from './style';
 import GlobalStyle from '../Common/GlobalStyle';
@@ -17,7 +17,7 @@ function App() {
   const [countryDetailInfo, setCountryDetailInfo] = useState({});
 
   useEffect(() => {
-    getCountryListFromAPI().then((data) => {
+    getCountryListFromAPI().then(data => {
       if (data) {
         setCountriesNames(data.Countries);
       }
@@ -40,9 +40,7 @@ function App() {
             setPopupIsOpen={setPopupIsOpen}
             setCountryDetailInfo={setCountryDetailInfo}
             countriesInfo={
-              searchValue
-                ? filterDataOnSearch(countriesInfo, searchValue)
-                : countriesInfo
+              searchValue ? filterDataOnSearch(countriesInfo, searchValue) : countriesInfo
             }
           />
         )}
