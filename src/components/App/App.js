@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import StyledApp from './style';
 import GlobalStyle from '../Common/GlobalStyle';
-import { getCountryListFromAPI } from '../../data/APIHndlers';
+import { getCountryListFromAPI } from '../../data/APIHandlers';
 import { filterDataOnSearch } from '../../data/dataHandlers';
 import { primary } from '../../styles/themes';
 import Preloader from '../Preloader';
