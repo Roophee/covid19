@@ -16,34 +16,37 @@ export const StyledCountryItem = styled.div`
   color: ${({ tableHeader, theme }) => (tableHeader ? theme.tableHeaderColor : 'inherit')};
   background: ${({ tableHeader, theme }) => (tableHeader ? theme.tableHeaderBgc : 'inherit')};
   ${borderStyle};
+  
+  @media(max-width: 400px) {
+    font-size: 18px;
+    line-height: 20px;
+  }
 `;
 
 export const StyledCountryName = styled.div`
   width: 75%;
   padding: 20px;
+  flex-shrink: 10;
   border-left: ${props => `1px solid ${props.tableHeader ? props.theme.borderColor : '#B2B2B2'}`};
 
   @media (max-width: 550px) {
     width: 50%;
-    padding: 20px 0;
+    padding: 20px 5px;
   }
 `;
 
 export const StyledCountryValue = styled.div`
   width: 25%;
   padding: 20px;
+  flex-shrink: 1;
   border-left: ${props => `1px solid ${props.tableHeader ? props.theme.borderColor : '#B2B2B2'}`};
 
-  @media (max-width: 700px) {
-    padding: 20px 10px;
+  @media (max-width: 1065px) {
+    padding: ${props => props.tableHeader ? '10px' : '20px 10px'};
   }
 
   @media (max-width: 550px) {
     width: 35%;
-  }
-
-  @media (max-width: 400px) {
-    padding: 20px 5px;
   }
 `;
 export const StyledCountryNumber = styled.div`
@@ -52,5 +55,6 @@ export const StyledCountryNumber = styled.div`
 
   @media (max-width: 550px) {
     padding: 20px 0;
+    padding-left: 5px;
   }
 `;

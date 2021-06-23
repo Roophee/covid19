@@ -7,8 +7,8 @@ const StyledTitle = styled.div`
   line-height: 84px;
   text-transform: uppercase;
 
-  @media (max-width: 400px) {
-    font-size: 2.7rem;
+  @media (max-width: 750px) {
+    font-size: 3rem;
     font-weight: 500;
   }
 `;

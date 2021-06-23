@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   width: 100%;
   margin: 30px 0;
 
-  @media (max-width: 750px) {
+  @media (max-width: 950px) {
     flex-direction: column;
     margin-bottom: 10px;
   }

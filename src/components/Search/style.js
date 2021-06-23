@@ -9,12 +9,13 @@ export const StyledContainer = styled.div`
   color: #b2b2b2;
   ${borderStyle};
 
-  @media (max-width: 750px) {
+  @media (max-width: 950px) {
     align-self: flex-end;
+    width: 45%;
     padding: 5px 0;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 660px) {
     align-self: center;
     width: 90%;
   }
