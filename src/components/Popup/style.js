@@ -14,6 +14,7 @@ export const StyledCountryDetailedInfo = styled.div`
   width: 31vw;
   height: 37vh;
   min-width: 300px;
+  min-height: 380px;
   padding: 20px;
   color: #757575;
   background: #fff;
@@ -30,6 +31,12 @@ export const StyledCountryDetailedInfo = styled.div`
     font-weight: bold;
     font-size: 48px;
     line-height: 56px;
+    text-align: center;
+    
+    @media (max-width: 400px){
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
   & .infoRow {
     display: flex;
