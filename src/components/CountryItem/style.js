@@ -16,8 +16,8 @@ export const StyledCountryItem = styled.div`
   color: ${({ tableHeader, theme }) => (tableHeader ? theme.tableHeaderColor : 'inherit')};
   background: ${({ tableHeader, theme }) => (tableHeader ? theme.tableHeaderBgc : 'inherit')};
   ${borderStyle};
-  
-  @media(max-width: 400px) {
+
+  @media (max-width: 400px) {
     font-size: 18px;
     line-height: 20px;
   }
@@ -42,7 +42,7 @@ export const StyledCountryValue = styled.div`
   border-left: ${props => `1px solid ${props.tableHeader ? props.theme.borderColor : '#B2B2B2'}`};
 
   @media (max-width: 1065px) {
-    padding: ${props => props.tableHeader ? '10px' : '20px 10px'};
+    padding: ${props => (props.tableHeader ? '10px' : '20px 10px')};
   }
 
   @media (max-width: 550px) {

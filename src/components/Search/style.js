@@ -11,13 +11,13 @@ export const StyledContainer = styled.div`
 
   @media (max-width: 950px) {
     align-self: flex-end;
+    height: 60px;
     width: 45%;
-    padding: 5px 0;
   }
 
   @media (max-width: 660px) {
     align-self: center;
-    width: 90%;
+    width: 100%;
   }
 `;
 
@@ -36,6 +36,10 @@ export const StyledSearch = styled.input`
   &:focus {
     outline: none;
     outline-offset: 0;
+  }
+  @media (max-width: 950px) {
+    font-size: 32px;
+    line-height: 36px;
   }
 `;
 
